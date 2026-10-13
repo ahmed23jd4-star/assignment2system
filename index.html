@@ -1,61 +1,51 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Project</title>
+    <meta name="description" content="A simple guide to learning web development.">
+    <title>Home | Web Basics</title>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-    <header>
-        <h1>About Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <h1 id="site-title">Web Basics</h1>
+        <p class="tagline">Small steps to build your first website</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <main>
-        <section>
-            <h2>Our Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Git</li>
-            </ul>
+    <main id="main-content">
+        <section class="intro">
+            <h2>Learn the building blocks</h2>
+            <p>Explore a few simple topics and get started with web development.</p>
+            <a class="button-link" href="contact.html">Ask a question</a>
         </section>
-
+        <section aria-labelledby="topics-title">
+            <h2 id="topics-title">Getting started</h2>
+            <div class="card-grid">
+                <article class="card"><h3>HTML</h3><p>Use HTML to give a page clear structure and meaning.</p></article>
+                <article class="card"><h3>CSS</h3><p>Use CSS to style content and make layouts adapt to screens.</p></article>
+                <article class="card"><h3>Accessibility</h3><p>Build pages that more people can use with confidence.</p></article>
+            </div>
+        </section>
         <section>
-            <h2>Course Schedule</h2>
-            <table border="2">
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Day</th>
-                        <th>Room</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Web Basics</td>
-                        <td>Monday</td>
-                        <td>B12</td>
-                    </tr>
-                    <tr>
-                        <td>Databases</td>
-                        <td>Tuesday</td>
-                        <td>C03</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Want to learn more?</h2>
+            <p>Open the information window to see a small CSS-only modal example.</p>
+            <a class="button-link" href="#info-modal">Open information</a>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
-    </footer>
+    <section class="modal" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="modal-title">A CSS-only modal</h2>
+            <p id="modal-text">This window opens and closes with links and CSS. No JavaScript is used.</p>
+            <a class="button-link" href="#main-content">Close window</a>
+        </div>
+        <a class="modal-backdrop" href="#main-content" aria-label="Close information window"></a>
+    </section>
+    <footer><p>&copy; 2026 Web Basics</p></footer>
+</body>
 </html>

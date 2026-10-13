@@ -3,78 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style.css">
-    <title>contact</title>
+    <meta name="description" content="Contact Web Basics with a question.">
+    <title>Contact | Web Basics</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <h1 id="site-title">Contact Us</h1>
+        <p class="tagline">We are happy to hear from you</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" aria-current="page">Contact</a>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
-            <h2>Get in Touch</h2>
-            <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="text">number:</label>
-                <input type="text" id="text" name="text" required>
-
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required> 
-
-                <label>Gender:</label>
-            <div class="radio-group">
-         <div class="radio-option">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-         </div>
-    
-         <div class="radio-option">
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-            </div>
-            </div>
-<hr> 
-                <label>your interests</label>
-                <div class="checkbox-group">
-
-                <input type="checkbox" id="html" name="intersted" value="html">
-                <label for="html">html</label>
-                <input type="checkbox" id="css" name="intersted" value="css">
-                <label for="css">css</label>
-                <input type="checkbox" id="javascript" name="intersted" value="javascript">
-                <label for="javascript">javascript</label>
+            <h2>Get in touch</h2>
+            <p>Fill out the form and tell us what you would like to learn.</p>
+            <div class="alert" role="status"><strong>Tip:</strong> Fields marked with * are required.</div>
+            <form action="#" method="get">
+                <div class="form-field">
+                    <label for="name">Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
-<hr>
-
-                <label>your subject</label>
-                <select id="dropdown" name="dropdown">
-                    <option value="cs305">cs305</option>
-                    <option value="cs309">cs309</option>
-                    <option value="cs307">cs307</option>
-                </select>
-<hr>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <hr>
-                <button type="submit">Send Message</button>
+                <div class="form-field">
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                    <label for="date">Best date to contact you</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-field">
+                    <label for="subject">Choose a subject</label>
+                    <select id="subject" name="subject">
+                        <option value="web-basics">Web Basics</option>
+                        <option value="databases">Databases</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Topics you like (optional)</legend>
+                    <div class="choice-row">
+                        <label><input type="checkbox" name="topic" value="html"> HTML</label>
+                        <label><input type="checkbox" name="topic" value="css"> CSS</label>
+                        <label><input type="checkbox" name="topic" value="javascript"> JavaScript</label>
+                    </div>
+                </fieldset>
+                <div class="form-field">
+                    <label for="message">Message <span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send message</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 My Website. All rights reserved.</p> 
-    </footer>
+    <footer><p>&copy; 2026 Web Basics</p></footer>
 </body>
 </html>
