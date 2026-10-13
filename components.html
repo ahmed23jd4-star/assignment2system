@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive examples of common web components.">
+    <title>Components | Web Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <h1 id="site-title">Component Library</h1>
+        <p class="tagline">Simple examples of reusable page parts</p>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="components.html" aria-current="page">Components</a>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section aria-labelledby="layout-title">
+            <h2 id="layout-title">Responsive cards</h2>
+            <p>The cards change from one column on small screens, to two on tablets and three on desktop.</p>
+            <div class="card-grid">
+                <article class="card"><h3>One</h3><p>A simple content card.</p></article>
+                <article class="card"><h3>Two</h3><p>The layout adjusts to screen width.</p></article>
+                <article class="card"><h3>Three</h3><p>Resize the window to see the change.</p></article>
+            </div>
+        </section>
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Form elements</h2>
+            <form action="#" method="get">
+                <div class="form-field">
+                    <label for="example-name">Name</label>
+                    <input type="text" id="example-name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="example-email">Email</label>
+                    <input type="email" id="example-email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="example-subject">Choose a subject</label>
+                    <select id="example-subject" name="subject">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="accessibility">Accessibility</option>
+                    </select>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section aria-labelledby="alert-title">
+            <h2 id="alert-title">Alert message</h2>
+            <div class="alert" role="status"><strong>Tip:</strong> Your form is ready to fill in.</div>
+        </section>
+        <section aria-labelledby="modal-demo-title">
+            <h2 id="modal-demo-title">CSS-only modal</h2>
+            <p>Use the link to open the window. It works without JavaScript.</p>
+            <a class="button-link" href="#example-modal">Open modal</a>
+        </section>
+    </main>
+    <section class="modal" id="example-modal" role="dialog" aria-modal="true" aria-labelledby="example-modal-title" aria-describedby="example-modal-text" tabindex="-1">
+        <div class="modal-content">
+            <h2 id="example-modal-title">Hello!</h2>
+            <p id="example-modal-text">This modal uses the CSS :target selector.</p>
+            <a class="button-link" href="#main-content">Close modal</a>
+        </div>
+        <a class="modal-backdrop" href="#main-content" aria-label="Close modal"></a>
+    </section>
+    <footer><p>&copy; 2026 Web Basics</p></footer>
+</body>
+</html>
